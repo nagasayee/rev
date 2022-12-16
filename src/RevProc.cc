@@ -50,6 +50,7 @@ RevProc::RevProc( unsigned Id,
   Stats.cyclesIdle = 0;
   Stats.percentEff = 0.0;
   Stats.floatsExec = 0;
+  cache_link = nullptr;
 }
 
 RevProc::~RevProc(){
@@ -1632,6 +1633,19 @@ bool RevProc::ClockTick( SST::Cycle_t currentCycle ){
         output->fatal(CALL_INFO, -1,
                     "Error: failed to execute instruction at PC=%" PRIx64 ".", ExecPC );
       }
+  
+  if((strcmp(ExtractMnemonic(InstTable[RegFile[threadToExec].Entry]).c_str() ,"lw")) == 0 || 
+     (strcmp(ExtractMnemonic(InstTable[RegFile[threadToExec].Entry]).c_str() ,"sw") == 0))
+  {
+    uint64_t cacheAddress = (uint64_t)(RegFile[threadToExec].RV32[Inst.rs1]+(int32_t)(td_u32(Inst.imm,12))) & 0xFFFFFF;
+    output->verbose(CALL_INFO, 6, 0,
+                  "Mnemonic %s \n", ExtractMnemonic(InstTable[RegFile[threadToExec].Entry]).c_str());
+    SST::Interfaces::SimpleMem::Request* req_line = new SST::Interfaces::SimpleMem::Request(SST::Interfaces::SimpleMem::Request::Read, cacheAddress, 8);
+    cache_link->sendRequest(req_line);
+    output->verbose(CALL_INFO, 6, 0,
+                  "Issuing request - Address : %llu, ID : %llu, Length : %d\n", cacheAddress, req_line->id, 8);
+    MemoryRequests.insert(std::pair<uint8_t, Interfaces::SimpleMem::Request::id_t>(threadToExec, req_line->id));   
+  }
 
       if( (Ext->GetName() == "RV32F") ||
           (Ext->GetName() == "RV32D") ||
@@ -1693,15 +1707,21 @@ bool RevProc::ClockTick( SST::Cycle_t currentCycle ){
 
   for(int tID = 0; tID < _REV_THREAD_COUNT_; tID ++){
       if(RegFile[tID].cost > 0){
-        RegFile[tID].cost = RegFile[tID].cost - 1;
-        if( RegFile[tID].cost == 0 ){
-            output->verbose(CALL_INFO, 6, 0,
-                      "Core %d ; ThreadID %d; Retiring PC= 0x%" PRIx64 "\n",
-                      id, tID, ExecPC);
-            Retired++;
-            RegFile[tID].trigger = false;
+        std::map<uint8_t, Interfaces::SimpleMem::Request::id_t>::iterator it = MemoryRequests.find(tID);
+        if(it != MemoryRequests.end()){
+          output->verbose(CALL_INFO, 6, 0, "Waiting for the response \n");
         }
-      }
+        else{
+          RegFile[tID].cost = RegFile[tID].cost - 1;
+          if( RegFile[tID].cost == 0 ){
+              output->verbose(CALL_INFO, 6, 0,
+                        "Core %d ; ThreadID %d; Retiring PC= 0x%" PRIx64 "\n",
+                        id, tID, ExecPC);
+              Retired++;
+              RegFile[tID].trigger = false;
+          }
+        }
+      } 
   }
 
   // Check for completion states and new tasks
@@ -1762,4 +1782,11 @@ bool RevProc::ClockTick( SST::Cycle_t currentCycle ){
   return rtn;
 }
 
+void RevProc::AcceptCacheResponse(Interfaces::SimpleMem::Request* ev) {
+  output->verbose(CALL_INFO, 5, 0,"Received response - ID : %llu\n", ev->id);
+  std::map<uint8_t, Interfaces::SimpleMem::Request::id_t>::iterator it = MemoryRequests.find(threadToExec);
+  if(it != MemoryRequests.end() && MemoryRequests.find(threadToExec)->second == ev->id){
+    MemoryRequests.erase(threadToExec);
+  }
+}
 // EOF

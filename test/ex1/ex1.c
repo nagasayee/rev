@@ -14,7 +14,11 @@
 #include <stdlib.h>
 
 int main(int argc, char **argv){
-  int i = 9;
-  i = i + argc;
-  return i;
+  int arr[2];
+  arr[0] = 0;
+  arr[0] = 1;
+  arr[1] = arr[0];
+  arr[1] = 0;
+  arr[1] = 1;
+  return 0;
 }

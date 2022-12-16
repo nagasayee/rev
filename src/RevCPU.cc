@@ -188,6 +188,21 @@ RevCPU::RevCPU( SST::ComponentId_t id, SST::Params& params )
     output.fatal(CALL_INFO, -1, "Error: enabling PAN tests requires a pan_nic");
   }
 
+  cache_link = loadUserSubComponent<Interfaces::SimpleMem>("memory", ComponentInfo::SHARE_NONE, timeConverter, new Interfaces::SimpleMem::Handler<RevCPU>(this, &RevCPU::handleEvent));
+  if (!cache_link) {
+    std::string interfaceName = params.find<std::string>("memoryinterface", "memHierarchy.memInterface");
+    output.verbose(CALL_INFO, 1, 0, "Memory interface to be loaded is: %s\n", interfaceName.c_str());
+
+    Params interfaceParams = params.get_scoped_params("memoryinterfaceparams");
+    interfaceParams.insert("port", "cache_link");
+    cache_link = loadAnonymousSubComponent<Interfaces::SimpleMem>(interfaceName, "memory", 0, ComponentInfo::SHARE_PORTS | ComponentInfo::INSERT_STATS,
+                  interfaceParams, timeConverter, new Interfaces::SimpleMem::Handler<RevCPU>(this, &RevCPU::handleEvent));
+
+    if (!cache_link)
+        output.fatal(CALL_INFO, -1, "%s, Error loading memory interface\n", getName().c_str());
+  }
+  output.verbose(CALL_INFO, 1, 0, "Loaded memory interface successfully.\n");
+  
   // Look for the fault injection logic
   EnableFaults = params.find<bool>("enable_faults", 0);
   if( EnableFaults ){
@@ -220,6 +235,7 @@ RevCPU::RevCPU( SST::ComponentId_t id, SST::Params& params )
   Procs.reserve(Procs.size() + numCores);
   for( unsigned i=0; i<numCores; i++ ){
     Procs.push_back( new RevProc( i, Opts, Mem, Loader, &output ) );
+    Procs[i]->cache_link = cache_link;
   }
 
   // setup the PAN execution contexts
@@ -444,6 +460,7 @@ void RevCPU::init( unsigned int phase ){
     Nic->init(phase);
   if( EnablePAN )
     PNic->init(phase);
+  cache_link->init(phase);
 }
 
 void RevCPU::handleMessage(Event *ev){
@@ -2306,6 +2323,7 @@ bool RevCPU::clockTick( SST::Cycle_t currentCycle ){
       }
     }
   }
+
   // Clock the PAN network transport module
   if( EnablePAN ){
 
@@ -2359,6 +2377,15 @@ bool RevCPU::clockTick( SST::Cycle_t currentCycle ){
   }
 
   return rtn;
+}
+
+void RevCPU::handleEvent(Interfaces::SimpleMem::Request* ev)
+{
+  for( unsigned i=0; i<Procs.size(); i++ ){
+    if( Enabled[i] ){
+      Procs[i]->AcceptCacheResponse(ev);
+    }
+  }
 }
 
 // EOF

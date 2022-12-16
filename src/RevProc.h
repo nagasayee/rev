@@ -15,7 +15,7 @@
 #include <sst/core/sst_config.h>
 #include <sst/core/component.h>
 #include <sst/core/statapi/stataccumulator.h>
-
+#include <sst/core/interfaces/simpleMem.h>
 
 // -- Standard Headers
 #include <iostream>
@@ -104,7 +104,10 @@ namespace SST{
           RevMem::RevMemStats memStats;
       };
 
+      void AcceptCacheResponse(Interfaces::SimpleMem::Request* ev);
+
       RevProcStats GetStats();
+      Interfaces::SimpleMem* cache_link;
 
     private:
       bool Halted;              ///< RevProc: determines if the core is halted
@@ -139,6 +142,8 @@ namespace SST{
       std::map<unsigned,std::pair<unsigned,unsigned>> EntryToExt;     ///< RevProc: instruction entry to extension object mapping
                                                                       ///           first = Master table entry number
                                                                       ///           second = pair<Extension Index, Extension Entry>
+
+      std::map<uint8_t, Interfaces::SimpleMem::Request::id_t> MemoryRequests;  ///<Memory requests containing request ID, threadID>
 
       /// RevProc: splits a string into tokens
       void splitStr(const std::string& s, char c, std::vector<std::string>& v);

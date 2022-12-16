@@ -1,0 +1,472 @@
+RevCPU[cpu:RevCPU:0]: Memory interface to be loaded is: memHierarchy.memInterface
+RevCPU[cpu:RevCPU:0]: Loaded memory interface successfully.
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [$x:0x105a4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__BSS_END__:0x11a10]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__DATA_BEGIN__:0x115c0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__FRAME_END__:0x115ac]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__SDATA_BEGIN__:0x119e8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__atexit.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__bss_start:0x119f4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__call_atexit.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__call_exitprocs:0x1034c]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__do_global_dtors_aux:0x10128]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__do_global_dtors_aux_fini_array_entry:0x115b8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__dso_handle:0x119ec]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__errno:0x105a4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__fini_array_end:0x115bc]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__fini_array_start:0x115b8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__frame_dummy_init_array_entry:0x115b4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__global_pointer$:0x11dc0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__init_array_end:0x115b8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__init_array_start:0x115b0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__libc_fini_array:0x1046c]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__libc_init_array:0x101d4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__preinit_array_end:0x115b0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__preinit_array_start:0x115b0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [__register_exitproc:0x104dc]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_edata:0x119f4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_end:0x11a10]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_exit:0x10574]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_global_impure_ptr:0x119e8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_impure_ptr:0x119f0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [_start:0x100dc]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [atexit:0x104c8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [atexit.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [completed.1:0x119f4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [crt0.o:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [crtstuff.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [errno.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [ex1.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [exit:0x10094]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [exit.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [fini.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [frame_dummy:0x1016c]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [impure.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [impure_data:0x115c0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [init.c:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [lib_a-memset.o:0x0]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [main:0x1018c]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [memset:0x10270]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [object.0:0x119f8]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [register_fini:0x100c4]
+RevCPU[cpu:LoadElf:0]: Symbol Table Entry [sys_exit.c:0x0]
+RevCPU[cpu:LoadProgramArgs:0]: Loading program argv[0] = ex1.exe
+RevCPU[cpu:RevFeature:0]: Core 0 ; Initializing feature set from machine string=RV64I
+RevCPU[cpu:ParseMachineModel:0]: Core 0 ; Setting XLEN to 64
+RevCPU[cpu:ParseMachineModel:0]: Core 0 ; Architecture string=I
+RevCPU[cpu:SeedInstTable:0]: Core 0 ; Seeding instruction table for machine model=RV64I
+RevCPU[cpu:EnableExt:0]: Core 0 ; Enabling extension=RV32I
+RevCPU[cpu:EnableExt:0]: Core 0 ; Enabling extension=RV64I
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Initializing table mapping for machine model=RV64I
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 55 = lui
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 23 = auipc
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 111 = jal
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 103 = jalr
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 99 = beq
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 355 = bne
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1123 = blt
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1379 = bge
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1635 = bltu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1891 = bgeu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 3 = lb
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 259 = lh
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 515 = lw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1027 = lbu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1283 = lhu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 35 = sb
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 291 = sh
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 547 = sw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 19 = addi
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 531 = slti
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 787 = sltiu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1043 = xori
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1555 = ori
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1811 = andi
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 275 = slli
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1299 = srli
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 66835 = srai
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 51 = add
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 65587 = sub
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 307 = sll
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 563 = slt
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 819 = sltu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1075 = xor
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1331 = srl
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 66867 = sra
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1587 = or
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1843 = and
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 15 = fence
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 271 = fence.i
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 115 = ecall
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 262259 = ebreak
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 371 = csrrw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 627 = csrrs
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 883 = csrrc
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1395 = csrrwi
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1651 = csrrsi
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1907 = csrrci
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1539 = lwu
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 771 = ld
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 803 = sd
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 27 = addiw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 283 = slliw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1307 = srliw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 66843 = sraiw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 59 = addw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 65595 = subw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 315 = sllw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 1339 = srlw
+RevCPU[cpu:InitTableMapping:0]: Core 0 ; Table Entry 66875 = sraw
+RevCPU[cpu:ReadOverrideTables:0]: Core 0 ; Reading override tables for machine model=RV64I
+RevCPU[cpu:RevCPU:0]: 
+*******                   
+/**////**                  
+/**   /**   *****  **    **
+/*******   **///**/**   /**
+/**///**  /*******//** /** 
+/**  //** /**////  //****  
+/**   //**//******  //**   
+//     //  //////    //    
+
+RevCPU[cpu:RevCPU:0]: Initialization of RevCPUs complete.
+RevCPU[cpu:clockTick:1000]: Cycle: 1
+RevCPU[cpu:DecodeInst:1000]: Core 0 ; Thread 0; PC:InstPayload = 0x1018c:0xfd010113
+RevCPU[cpu:ClockTick:1000]: Core 0 ; Thread 0; Executing PC= 0x1018c
+RevCPU[cpu:ClockTick:1000]: Core 0 ; ThreadID 0; Retiring PC= 0x1018c
+RevCPU[cpu:clockTick:2000]: Cycle: 2
+RevCPU[cpu:DecodeInst:2000]: Core 0 ; Thread 0; PC:InstPayload = 0x10190:0x2812623
+RevCPU[cpu:ClockTick:2000]: Core 0 ; Thread 0; Executing PC= 0x10190
+RevCPU[cpu:ClockTick:2000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:2000]: Issuing request - Address : 16777156, ID : 0, Length : 8
+RevCPU[cpu:ClockTick:2000]: Waiting for the response 
+RevCPU[cpu:clockTick:3000]: Cycle: 3
+RevCPU[cpu:ClockTick:3000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:3000]: Waiting for the response 
+RevCPU[cpu:clockTick:4000]: Cycle: 4
+RevCPU[cpu:ClockTick:4000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:4000]: Waiting for the response 
+RevCPU[cpu:clockTick:5000]: Cycle: 5
+RevCPU[cpu:ClockTick:5000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:5000]: Waiting for the response 
+RevCPU[cpu:clockTick:6000]: Cycle: 6
+RevCPU[cpu:ClockTick:6000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:6000]: Waiting for the response 
+RevCPU[cpu:clockTick:7000]: Cycle: 7
+RevCPU[cpu:ClockTick:7000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:7000]: Waiting for the response 
+RevCPU[cpu:clockTick:8000]: Cycle: 8
+RevCPU[cpu:ClockTick:8000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:8000]: Waiting for the response 
+RevCPU[cpu:clockTick:9000]: Cycle: 9
+RevCPU[cpu:ClockTick:9000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:9000]: Waiting for the response 
+RevCPU[cpu:clockTick:10000]: Cycle: 10
+RevCPU[cpu:ClockTick:10000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:10000]: Waiting for the response 
+RevCPU[cpu:clockTick:11000]: Cycle: 11
+RevCPU[cpu:ClockTick:11000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:11000]: Waiting for the response 
+RevCPU[cpu:clockTick:12000]: Cycle: 12
+RevCPU[cpu:ClockTick:12000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:12000]: Waiting for the response 
+RevCPU[cpu:clockTick:13000]: Cycle: 13
+RevCPU[cpu:ClockTick:13000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:13000]: Waiting for the response 
+RevCPU[cpu:clockTick:14000]: Cycle: 14
+RevCPU[cpu:ClockTick:14000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:14000]: Waiting for the response 
+RevCPU[cpu:clockTick:15000]: Cycle: 15
+RevCPU[cpu:ClockTick:15000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:15000]: Waiting for the response 
+RevCPU[cpu:clockTick:16000]: Cycle: 16
+RevCPU[cpu:ClockTick:16000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:16000]: Waiting for the response 
+RevCPU[cpu:clockTick:17000]: Cycle: 17
+RevCPU[cpu:ClockTick:17000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:17000]: Waiting for the response 
+RevCPU[cpu:clockTick:18000]: Cycle: 18
+RevCPU[cpu:ClockTick:18000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:18000]: Waiting for the response 
+RevCPU[cpu:clockTick:19000]: Cycle: 19
+RevCPU[cpu:ClockTick:19000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:19000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:19000]: Received response - ID : 0
+RevCPU[cpu:clockTick:20000]: Cycle: 20
+RevCPU[cpu:ClockTick:20000]: Core 0 ; No available thread to exec PC= 0x10190
+RevCPU[cpu:ClockTick:20000]: Core 0 ; ThreadID 0; Retiring PC= 0x10190
+RevCPU[cpu:clockTick:21000]: Cycle: 21
+RevCPU[cpu:DecodeInst:21000]: Core 0 ; Thread 0; PC:InstPayload = 0x10194:0x3010413
+RevCPU[cpu:ClockTick:21000]: Core 0 ; Thread 0; Executing PC= 0x10194
+RevCPU[cpu:ClockTick:21000]: Core 0 ; ThreadID 0; Retiring PC= 0x10194
+RevCPU[cpu:clockTick:22000]: Cycle: 22
+RevCPU[cpu:DecodeInst:22000]: Core 0 ; Thread 0; PC:InstPayload = 0x10198:0xfca42e23
+RevCPU[cpu:ClockTick:22000]: Core 0 ; Thread 0; Executing PC= 0x10198
+RevCPU[cpu:ClockTick:22000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:22000]: Issuing request - Address : 73116, ID : 1, Length : 8
+RevCPU[cpu:ClockTick:22000]: Waiting for the response 
+RevCPU[cpu:clockTick:23000]: Cycle: 23
+RevCPU[cpu:ClockTick:23000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:23000]: Waiting for the response 
+RevCPU[cpu:clockTick:24000]: Cycle: 24
+RevCPU[cpu:ClockTick:24000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:24000]: Waiting for the response 
+RevCPU[cpu:clockTick:25000]: Cycle: 25
+RevCPU[cpu:ClockTick:25000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:25000]: Waiting for the response 
+RevCPU[cpu:clockTick:26000]: Cycle: 26
+RevCPU[cpu:ClockTick:26000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:26000]: Waiting for the response 
+RevCPU[cpu:clockTick:27000]: Cycle: 27
+RevCPU[cpu:ClockTick:27000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:27000]: Waiting for the response 
+RevCPU[cpu:clockTick:28000]: Cycle: 28
+RevCPU[cpu:ClockTick:28000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:28000]: Waiting for the response 
+RevCPU[cpu:clockTick:29000]: Cycle: 29
+RevCPU[cpu:ClockTick:29000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:29000]: Waiting for the response 
+RevCPU[cpu:clockTick:30000]: Cycle: 30
+RevCPU[cpu:ClockTick:30000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:30000]: Waiting for the response 
+RevCPU[cpu:clockTick:31000]: Cycle: 31
+RevCPU[cpu:ClockTick:31000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:31000]: Waiting for the response 
+RevCPU[cpu:clockTick:32000]: Cycle: 32
+RevCPU[cpu:ClockTick:32000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:32000]: Waiting for the response 
+RevCPU[cpu:clockTick:33000]: Cycle: 33
+RevCPU[cpu:ClockTick:33000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:33000]: Waiting for the response 
+RevCPU[cpu:clockTick:34000]: Cycle: 34
+RevCPU[cpu:ClockTick:34000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:34000]: Waiting for the response 
+RevCPU[cpu:clockTick:35000]: Cycle: 35
+RevCPU[cpu:ClockTick:35000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:35000]: Waiting for the response 
+RevCPU[cpu:clockTick:36000]: Cycle: 36
+RevCPU[cpu:ClockTick:36000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:36000]: Waiting for the response 
+RevCPU[cpu:clockTick:37000]: Cycle: 37
+RevCPU[cpu:ClockTick:37000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:37000]: Waiting for the response 
+RevCPU[cpu:clockTick:38000]: Cycle: 38
+RevCPU[cpu:ClockTick:38000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:38000]: Waiting for the response 
+RevCPU[cpu:clockTick:39000]: Cycle: 39
+RevCPU[cpu:ClockTick:39000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:39000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:39000]: Received response - ID : 1
+RevCPU[cpu:clockTick:40000]: Cycle: 40
+RevCPU[cpu:ClockTick:40000]: Core 0 ; No available thread to exec PC= 0x10198
+RevCPU[cpu:ClockTick:40000]: Core 0 ; ThreadID 0; Retiring PC= 0x10198
+RevCPU[cpu:clockTick:41000]: Cycle: 41
+RevCPU[cpu:DecodeInst:41000]: Core 0 ; Thread 0; PC:InstPayload = 0x1019c:0xfcb42c23
+RevCPU[cpu:ClockTick:41000]: Core 0 ; Thread 0; Executing PC= 0x1019c
+RevCPU[cpu:ClockTick:41000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:41000]: Issuing request - Address : 73112, ID : 2, Length : 8
+RevCPU[cpu:ClockTick:41000]: Waiting for the response 
+RevCPU[cpu:clockTick:42000]: Cycle: 42
+RevCPU[cpu:ClockTick:42000]: Core 0 ; No available thread to exec PC= 0x1019c
+RevCPU[cpu:ClockTick:42000]: Waiting for the response 
+RevCPU[cpu:clockTick:43000]: Cycle: 43
+RevCPU[cpu:ClockTick:43000]: Core 0 ; No available thread to exec PC= 0x1019c
+RevCPU[cpu:ClockTick:43000]: Waiting for the response 
+RevCPU[cpu:clockTick:44000]: Cycle: 44
+RevCPU[cpu:ClockTick:44000]: Core 0 ; No available thread to exec PC= 0x1019c
+RevCPU[cpu:ClockTick:44000]: Waiting for the response 
+RevCPU[cpu:clockTick:45000]: Cycle: 45
+RevCPU[cpu:ClockTick:45000]: Core 0 ; No available thread to exec PC= 0x1019c
+RevCPU[cpu:ClockTick:45000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:45000]: Received response - ID : 2
+RevCPU[cpu:clockTick:46000]: Cycle: 46
+RevCPU[cpu:ClockTick:46000]: Core 0 ; No available thread to exec PC= 0x1019c
+RevCPU[cpu:ClockTick:46000]: Core 0 ; ThreadID 0; Retiring PC= 0x1019c
+RevCPU[cpu:clockTick:47000]: Cycle: 47
+RevCPU[cpu:DecodeInst:47000]: Core 0 ; Thread 0; PC:InstPayload = 0x101a0:0xfe042423
+RevCPU[cpu:ClockTick:47000]: Core 0 ; Thread 0; Executing PC= 0x101a0
+RevCPU[cpu:ClockTick:47000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:47000]: Issuing request - Address : 73128, ID : 3, Length : 8
+RevCPU[cpu:ClockTick:47000]: Waiting for the response 
+RevCPU[cpu:clockTick:48000]: Cycle: 48
+RevCPU[cpu:ClockTick:48000]: Core 0 ; No available thread to exec PC= 0x101a0
+RevCPU[cpu:ClockTick:48000]: Waiting for the response 
+RevCPU[cpu:clockTick:49000]: Cycle: 49
+RevCPU[cpu:ClockTick:49000]: Core 0 ; No available thread to exec PC= 0x101a0
+RevCPU[cpu:ClockTick:49000]: Waiting for the response 
+RevCPU[cpu:clockTick:50000]: Cycle: 50
+RevCPU[cpu:ClockTick:50000]: Core 0 ; No available thread to exec PC= 0x101a0
+RevCPU[cpu:ClockTick:50000]: Waiting for the response 
+RevCPU[cpu:clockTick:51000]: Cycle: 51
+RevCPU[cpu:ClockTick:51000]: Core 0 ; No available thread to exec PC= 0x101a0
+RevCPU[cpu:ClockTick:51000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:51000]: Received response - ID : 3
+RevCPU[cpu:clockTick:52000]: Cycle: 52
+RevCPU[cpu:ClockTick:52000]: Core 0 ; No available thread to exec PC= 0x101a0
+RevCPU[cpu:ClockTick:52000]: Core 0 ; ThreadID 0; Retiring PC= 0x101a0
+RevCPU[cpu:clockTick:53000]: Cycle: 53
+RevCPU[cpu:DecodeInst:53000]: Core 0 ; Thread 0; PC:InstPayload = 0x101a4:0x100793
+RevCPU[cpu:ClockTick:53000]: Core 0 ; Thread 0; Executing PC= 0x101a4
+RevCPU[cpu:ClockTick:53000]: Core 0 ; ThreadID 0; Retiring PC= 0x101a4
+RevCPU[cpu:clockTick:54000]: Cycle: 54
+RevCPU[cpu:DecodeInst:54000]: Core 0 ; Thread 0; PC:InstPayload = 0x101a8:0xfef42423
+RevCPU[cpu:ClockTick:54000]: Core 0 ; Thread 0; Executing PC= 0x101a8
+RevCPU[cpu:ClockTick:54000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:54000]: Issuing request - Address : 73128, ID : 4, Length : 8
+RevCPU[cpu:ClockTick:54000]: Waiting for the response 
+RevCPU[cpu:clockTick:55000]: Cycle: 55
+RevCPU[cpu:ClockTick:55000]: Core 0 ; No available thread to exec PC= 0x101a8
+RevCPU[cpu:ClockTick:55000]: Waiting for the response 
+RevCPU[cpu:clockTick:56000]: Cycle: 56
+RevCPU[cpu:ClockTick:56000]: Core 0 ; No available thread to exec PC= 0x101a8
+RevCPU[cpu:ClockTick:56000]: Waiting for the response 
+RevCPU[cpu:clockTick:57000]: Cycle: 57
+RevCPU[cpu:ClockTick:57000]: Core 0 ; No available thread to exec PC= 0x101a8
+RevCPU[cpu:ClockTick:57000]: Waiting for the response 
+RevCPU[cpu:clockTick:58000]: Cycle: 58
+RevCPU[cpu:ClockTick:58000]: Core 0 ; No available thread to exec PC= 0x101a8
+RevCPU[cpu:ClockTick:58000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:58000]: Received response - ID : 4
+RevCPU[cpu:clockTick:59000]: Cycle: 59
+RevCPU[cpu:ClockTick:59000]: Core 0 ; No available thread to exec PC= 0x101a8
+RevCPU[cpu:ClockTick:59000]: Core 0 ; ThreadID 0; Retiring PC= 0x101a8
+RevCPU[cpu:clockTick:60000]: Cycle: 60
+RevCPU[cpu:DecodeInst:60000]: Core 0 ; Thread 0; PC:InstPayload = 0x101ac:0xfe842783
+RevCPU[cpu:ClockTick:60000]: Core 0 ; Thread 0; Executing PC= 0x101ac
+RevCPU[cpu:ClockTick:60000]: Mnemonic lw 
+RevCPU[cpu:ClockTick:60000]: Issuing request - Address : 73128, ID : 5, Length : 8
+RevCPU[cpu:ClockTick:60000]: Waiting for the response 
+RevCPU[cpu:clockTick:61000]: Cycle: 61
+RevCPU[cpu:ClockTick:61000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:ClockTick:61000]: Waiting for the response 
+RevCPU[cpu:clockTick:62000]: Cycle: 62
+RevCPU[cpu:ClockTick:62000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:ClockTick:62000]: Waiting for the response 
+RevCPU[cpu:clockTick:63000]: Cycle: 63
+RevCPU[cpu:ClockTick:63000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:ClockTick:63000]: Waiting for the response 
+RevCPU[cpu:clockTick:64000]: Cycle: 64
+RevCPU[cpu:ClockTick:64000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:ClockTick:64000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:64000]: Received response - ID : 5
+RevCPU[cpu:clockTick:65000]: Cycle: 65
+RevCPU[cpu:ClockTick:65000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:clockTick:66000]: Cycle: 66
+RevCPU[cpu:ClockTick:66000]: Core 0 ; No available thread to exec PC= 0x101ac
+RevCPU[cpu:ClockTick:66000]: Core 0 ; ThreadID 0; Retiring PC= 0x101ac
+RevCPU[cpu:clockTick:67000]: Cycle: 67
+RevCPU[cpu:DecodeInst:67000]: Core 0 ; Thread 0; PC:InstPayload = 0x101b0:0xfef42623
+RevCPU[cpu:ClockTick:67000]: Core 0 ; Thread 0; Executing PC= 0x101b0
+RevCPU[cpu:ClockTick:67000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:67000]: Issuing request - Address : 73132, ID : 6, Length : 8
+RevCPU[cpu:ClockTick:67000]: Waiting for the response 
+RevCPU[cpu:clockTick:68000]: Cycle: 68
+RevCPU[cpu:ClockTick:68000]: Core 0 ; No available thread to exec PC= 0x101b0
+RevCPU[cpu:ClockTick:68000]: Waiting for the response 
+RevCPU[cpu:clockTick:69000]: Cycle: 69
+RevCPU[cpu:ClockTick:69000]: Core 0 ; No available thread to exec PC= 0x101b0
+RevCPU[cpu:ClockTick:69000]: Waiting for the response 
+RevCPU[cpu:clockTick:70000]: Cycle: 70
+RevCPU[cpu:ClockTick:70000]: Core 0 ; No available thread to exec PC= 0x101b0
+RevCPU[cpu:ClockTick:70000]: Waiting for the response 
+RevCPU[cpu:clockTick:71000]: Cycle: 71
+RevCPU[cpu:ClockTick:71000]: Core 0 ; No available thread to exec PC= 0x101b0
+RevCPU[cpu:ClockTick:71000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:71000]: Received response - ID : 6
+RevCPU[cpu:clockTick:72000]: Cycle: 72
+RevCPU[cpu:ClockTick:72000]: Core 0 ; No available thread to exec PC= 0x101b0
+RevCPU[cpu:ClockTick:72000]: Core 0 ; ThreadID 0; Retiring PC= 0x101b0
+RevCPU[cpu:clockTick:73000]: Cycle: 73
+RevCPU[cpu:DecodeInst:73000]: Core 0 ; Thread 0; PC:InstPayload = 0x101b4:0xfe042623
+RevCPU[cpu:ClockTick:73000]: Core 0 ; Thread 0; Executing PC= 0x101b4
+RevCPU[cpu:ClockTick:73000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:73000]: Issuing request - Address : 73132, ID : 7, Length : 8
+RevCPU[cpu:ClockTick:73000]: Waiting for the response 
+RevCPU[cpu:clockTick:74000]: Cycle: 74
+RevCPU[cpu:ClockTick:74000]: Core 0 ; No available thread to exec PC= 0x101b4
+RevCPU[cpu:ClockTick:74000]: Waiting for the response 
+RevCPU[cpu:clockTick:75000]: Cycle: 75
+RevCPU[cpu:ClockTick:75000]: Core 0 ; No available thread to exec PC= 0x101b4
+RevCPU[cpu:ClockTick:75000]: Waiting for the response 
+RevCPU[cpu:clockTick:76000]: Cycle: 76
+RevCPU[cpu:ClockTick:76000]: Core 0 ; No available thread to exec PC= 0x101b4
+RevCPU[cpu:ClockTick:76000]: Waiting for the response 
+RevCPU[cpu:clockTick:77000]: Cycle: 77
+RevCPU[cpu:ClockTick:77000]: Core 0 ; No available thread to exec PC= 0x101b4
+RevCPU[cpu:ClockTick:77000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:77000]: Received response - ID : 7
+RevCPU[cpu:clockTick:78000]: Cycle: 78
+RevCPU[cpu:ClockTick:78000]: Core 0 ; No available thread to exec PC= 0x101b4
+RevCPU[cpu:ClockTick:78000]: Core 0 ; ThreadID 0; Retiring PC= 0x101b4
+RevCPU[cpu:clockTick:79000]: Cycle: 79
+RevCPU[cpu:DecodeInst:79000]: Core 0 ; Thread 0; PC:InstPayload = 0x101b8:0x100793
+RevCPU[cpu:ClockTick:79000]: Core 0 ; Thread 0; Executing PC= 0x101b8
+RevCPU[cpu:ClockTick:79000]: Core 0 ; ThreadID 0; Retiring PC= 0x101b8
+RevCPU[cpu:clockTick:80000]: Cycle: 80
+RevCPU[cpu:DecodeInst:80000]: Core 0 ; Thread 0; PC:InstPayload = 0x101bc:0xfef42623
+RevCPU[cpu:ClockTick:80000]: Core 0 ; Thread 0; Executing PC= 0x101bc
+RevCPU[cpu:ClockTick:80000]: Mnemonic sw 
+RevCPU[cpu:ClockTick:80000]: Issuing request - Address : 73132, ID : 8, Length : 8
+RevCPU[cpu:ClockTick:80000]: Waiting for the response 
+RevCPU[cpu:clockTick:81000]: Cycle: 81
+RevCPU[cpu:ClockTick:81000]: Core 0 ; No available thread to exec PC= 0x101bc
+RevCPU[cpu:ClockTick:81000]: Waiting for the response 
+RevCPU[cpu:clockTick:82000]: Cycle: 82
+RevCPU[cpu:ClockTick:82000]: Core 0 ; No available thread to exec PC= 0x101bc
+RevCPU[cpu:ClockTick:82000]: Waiting for the response 
+RevCPU[cpu:clockTick:83000]: Cycle: 83
+RevCPU[cpu:ClockTick:83000]: Core 0 ; No available thread to exec PC= 0x101bc
+RevCPU[cpu:ClockTick:83000]: Waiting for the response 
+RevCPU[cpu:clockTick:84000]: Cycle: 84
+RevCPU[cpu:ClockTick:84000]: Core 0 ; No available thread to exec PC= 0x101bc
+RevCPU[cpu:ClockTick:84000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:84000]: Received response - ID : 8
+RevCPU[cpu:clockTick:85000]: Cycle: 85
+RevCPU[cpu:ClockTick:85000]: Core 0 ; No available thread to exec PC= 0x101bc
+RevCPU[cpu:ClockTick:85000]: Core 0 ; ThreadID 0; Retiring PC= 0x101bc
+RevCPU[cpu:clockTick:86000]: Cycle: 86
+RevCPU[cpu:DecodeInst:86000]: Core 0 ; Thread 0; PC:InstPayload = 0x101c0:0x793
+RevCPU[cpu:ClockTick:86000]: Core 0 ; Thread 0; Executing PC= 0x101c0
+RevCPU[cpu:ClockTick:86000]: Core 0 ; ThreadID 0; Retiring PC= 0x101c0
+RevCPU[cpu:clockTick:87000]: Cycle: 87
+RevCPU[cpu:DecodeInst:87000]: Core 0 ; Thread 0; PC:InstPayload = 0x101c4:0x78513
+RevCPU[cpu:ClockTick:87000]: Core 0 ; Thread 0; Executing PC= 0x101c4
+RevCPU[cpu:ClockTick:87000]: Core 0 ; ThreadID 0; Retiring PC= 0x101c4
+RevCPU[cpu:clockTick:88000]: Cycle: 88
+RevCPU[cpu:DecodeInst:88000]: Core 0 ; Thread 0; PC:InstPayload = 0x101c8:0x2c12403
+RevCPU[cpu:ClockTick:88000]: Core 0 ; Thread 0; Executing PC= 0x101c8
+RevCPU[cpu:ClockTick:88000]: Mnemonic lw 
+RevCPU[cpu:ClockTick:88000]: Issuing request - Address : 16777156, ID : 9, Length : 8
+RevCPU[cpu:ClockTick:88000]: Waiting for the response 
+RevCPU[cpu:clockTick:89000]: Cycle: 89
+RevCPU[cpu:ClockTick:89000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:ClockTick:89000]: Waiting for the response 
+RevCPU[cpu:clockTick:90000]: Cycle: 90
+RevCPU[cpu:ClockTick:90000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:ClockTick:90000]: Waiting for the response 
+RevCPU[cpu:clockTick:91000]: Cycle: 91
+RevCPU[cpu:ClockTick:91000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:ClockTick:91000]: Waiting for the response 
+RevCPU[cpu:clockTick:92000]: Cycle: 92
+RevCPU[cpu:ClockTick:92000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:ClockTick:92000]: Waiting for the response 
+RevCPU[cpu:AcceptCacheResponse:92000]: Received response - ID : 9
+RevCPU[cpu:clockTick:93000]: Cycle: 93
+RevCPU[cpu:ClockTick:93000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:clockTick:94000]: Cycle: 94
+RevCPU[cpu:ClockTick:94000]: Core 0 ; No available thread to exec PC= 0x101c8
+RevCPU[cpu:ClockTick:94000]: Core 0 ; ThreadID 0; Retiring PC= 0x101c8
+RevCPU[cpu:clockTick:95000]: Cycle: 95
+RevCPU[cpu:DecodeInst:95000]: Core 0 ; Thread 0; PC:InstPayload = 0x101cc:0x3010113
+RevCPU[cpu:ClockTick:95000]: Core 0 ; Thread 0; Executing PC= 0x101cc
+RevCPU[cpu:ClockTick:95000]: Core 0 ; ThreadID 0; Retiring PC= 0x101cc
+RevCPU[cpu:clockTick:96000]: Cycle: 96
+RevCPU[cpu:DecodeInst:96000]: Core 0 ; Thread 0; PC:InstPayload = 0x101d0:0x8067
+RevCPU[cpu:ClockTick:96000]: Core 0 ; Thread 0; Executing PC= 0x101d0
+RevCPU[cpu:ClockTick:96000]: Core 0 ; ThreadID 0; Retiring PC= 0x101d0
+RevCPU[cpu:ClockTick:96000]: Program execution complete
+RevCPU[cpu:ClockTick:96000]: Program Stats: Total Cycles: 96 Busy Cycles: 18 Idle Cycles: 78 Eff: 0.187500
+RevCPU[cpu:ClockTick:96000]: 	 Bytes Read: 80 Bytes Written: 2712 Floats Read: 0 Doubles Read 0  Floats Exec: 0 Inst Retired: 18
+RevCPU[cpu:clockTick:96000]: Closing Processor 0 at Cycle: 96
+RevCPU[cpu:clockTick:96000]: OK to end sim at cycle: 96
+Simulation is complete, simulated time: 96 ns

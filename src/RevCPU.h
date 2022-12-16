@@ -25,6 +25,7 @@
 #include <sst/core/sst_config.h>
 #include <sst/core/component.h>
 #include <sst/core/interfaces/simpleNetwork.h>
+#include <sst/core/interfaces/simpleMem.h>
 
 // -- Rev Headers
 #include "RevOpts.h"
@@ -113,6 +114,7 @@ namespace SST {
       // RevCPU Port Parameter Data
       // -------------------------------------------------------
       SST_ELI_DOCUMENT_PORTS(
+        		{ "cache_link",      	"Link to Memory Controller", { "memHierarchy.memEvent" , "" } }
                             )
 
       // -------------------------------------------------------
@@ -120,7 +122,8 @@ namespace SST {
       // -------------------------------------------------------
       SST_ELI_DOCUMENT_SUBCOMPONENT_SLOTS(
         {"nic", "Network interface", "SST::RevCPU::RevNIC"},
-        {"pan_nic", "PAN Network interface", "SST::RevCPU::PanNet"}
+        {"pan_nic", "PAN Network interface", "SST::RevCPU::PanNet"},
+        { "memory",     "The memory interface to use (e.g., interface to caches)", "SST::Interfaces::SimpleMem" }
       )
 
       // -------------------------------------------------------
@@ -233,6 +236,9 @@ namespace SST {
       panNicAPI *PNic;                    ///< RevCPU: PAN network interface controller
       PanExec *PExec;                     ///< RevCPU: PAN execution context
 
+
+      Interfaces::SimpleMem* cache_link;
+	    // Link* srcLink;
 
       std::queue<std::pair<panNicEvent *,int>> SendMB;  ///< RevCPU: outgoing command mailbox; pair<Cmd,Dest>
       std::queue<std::pair<uint32_t,char *>> ZeroRqst;  ///< RevCPU: tracks incoming zero address put requests; pair<Size,Data>
@@ -471,6 +477,8 @@ namespace SST {
       void PANBuildBasicSuccess(panNicEvent *event, panNicEvent *rtn);
 
       void UpdateCoreStatistics(uint16_t coreNum);
+
+      void handleEvent( Interfaces::SimpleMem::Request* ev );
 
     }; // class RevCPU
   } // namespace RevCPU
